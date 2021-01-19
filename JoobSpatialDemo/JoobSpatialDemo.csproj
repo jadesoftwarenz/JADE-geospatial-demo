@@ -101,10 +101,6 @@
     <Reference Include="JadeSoftware.Joob.Management, Version=20.0.1.0, Culture=neutral, PublicKeyToken=b5033a0291fb93d9, processorArchitecture=AMD64">
       <HintPath>..\packages\Joob.1.0.1\lib\net471\JadeSoftware.Joob.Management.dll</HintPath>
     </Reference>
-    <Reference Include="SpatialDemoExposure, Version=18.0.1.0, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\JoobSpatialExposure\obj\Debug\SpatialDemoExposure.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -208,6 +204,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Earth_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JoobSpatialExposure\SpatialDemoExposure.csproj">
+      <Project>{e214a574-c4fc-43af-8b87-4ccd61e3149c}</Project>
+      <Name>SpatialDemoExposure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

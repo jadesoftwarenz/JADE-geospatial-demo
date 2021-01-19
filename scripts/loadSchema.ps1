@@ -7,9 +7,9 @@ $schemaDirectory = "$PSScriptRoot\Schemas"
 . ($globalConfig)
 
 $command = "$jadeBinDirectory\$tool"
-
-& $command path=$jadeDatabaseDirectory ini="$jadeRootDirectory\system.ini" `
-    jadelog.logdirectory=$jadelogDirectory jadelog.logfile="schemaload" `
-    schema=RootSchema app=JadeSchemaLoader `
-    startAppParameters schemaFile="$schemaDirectory\GeoSpatial.mul" deletePropertiesIfAbsent=true loadStyle=onlyStructuralVersioning replayableReorg=true compileUnchangedMethods=true endAppParameters
-    
+   
+$arguments = "path=$jadeDatabaseDirectory ini=$jadeRootDirectory\$iniFile " +
+    "jadelog.logdirectory=$jadelogDirectory jadelog.logfile=schemaload " +
+    "schema=RootSchema app=JadeSchemaLoader " +
+    "startAppParameters schemaFile=$schemaDirectory\GeoSpatial.mul deletePropertiesIfAbsent=true loadStyle=onlyStructuralVersioning replayableReorg=true compileUnchangedMethods=true endAppParameters"
+Start-Process -FilePath $command -ArgumentList $arguments -PassThru -Wait -NoNewWindow

@@ -11,7 +11,7 @@ $jadeBinDirectory = $jadeRootDirectory + "\bin"
 $jadeLogDirectory = $jadeRootDirectory + "\logs"
 $jadeDatabaseDirectory = $jadeRootDirectory + "\system"
 $jadeJournalRootDirectory = $jadeRootDirectory + "\journals"
-$iniFile = "system.ini"
+$iniFile = "jade.ini"
 
 $registry = "registry.jadeworld.io"
 $repoPrefix = "jade"
