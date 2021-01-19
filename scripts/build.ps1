@@ -10,14 +10,10 @@ Push-Location $PSScriptRoot
 # locate msbuild and set path and environments variables for command line
 . .\find-msbuild.ps1
 
-# build exposure
-Push-Location .\..\JoobSpatialExposure
-MsBuild  SpatialDemoExposure.csproj -t:Build -property:Configuration=Debug -property:Platform=x64 
-Pop-Location
-
-# build demo
-Push-Location .\..\JoobSpatialDemo
-MsBuild  JoobSpatialDemo.csproj -t:Build -property:Configuration=Debug -property:Platform=x64 
+# build .NET solution
+Push-Location .\..\
+MsBuild  SpatialDemoExposure.sln -t:restore 
+MsBuild  SpatialDemoExposure.sln -t:Build -property:Configuration=Debug -property:Platform=x64 
 Pop-Location
 
 Pop-Location
