@@ -1,4 +1,4 @@
-jadeVersionNumber "18.0.01";
+jadeVersionNumber "20.0.01";
 schemaDefinition
 JoobSpatialDemoSchema subschemaOf RootSchema completeDefinition, patchVersioningEnabled = false;
 		setModifiedTimeStamp "cnwpjr2" "9.9.00" 2011:05:06:10:41:23.853;
@@ -28,7 +28,6 @@ typeHeaders
 	PersonByGeomRTree subclassOf JadeMemberKeyRTree number = 7049;
 	StateByGeomRTree subclassOf JadeMemberKeyRTree number = 7043;
  
-interfaceDefs
 membershipDefinitions
 	CityByNameDict of City ;
 	CountyByNameDict of County ;
@@ -274,7 +273,7 @@ JoobSpatialDemoSchemaDb
 	(
 		setModifiedTimeStamp "cnwpjr2" "6.3.00" 2011:05:06:10:41:18;
 	databaseFileDefinitions
-		"JoobSpatialDemo" number=165;
+		"JoobSpatialDemo" number = 165;
 		setModifiedTimeStamp "<unknown>" "" 2011:05:06:10:41:18;
 	defaultFileDefinition "JoobSpatialDemo";
 	classMapDefinitions

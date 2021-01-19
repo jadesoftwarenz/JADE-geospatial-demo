@@ -45,6 +45,21 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JadeSoftware.Jade.DotNetInterop, Version=20.0.1.0, Culture=neutral, PublicKeyToken=b5033a0291fb93d9, processorArchitecture=AMD64">
+      <HintPath>..\packages\Joob.1.0.1\lib\net471\JadeSoftware.Jade.DotNetInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="JadeSoftware.Joob, Version=20.0.1.0, Culture=neutral, PublicKeyToken=b5033a0291fb93d9, processorArchitecture=AMD64">
+      <HintPath>..\packages\Joob.1.0.1\lib\net471\JadeSoftware.Joob.dll</HintPath>
+    </Reference>
+    <Reference Include="JadeSoftware.Joob.Common, Version=20.0.1.0, Culture=neutral, PublicKeyToken=b5033a0291fb93d9, processorArchitecture=AMD64">
+      <HintPath>..\packages\Joob.1.0.1\lib\net471\JadeSoftware.Joob.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="JadeSoftware.Joob.Interop, Version=20.0.1.0, Culture=neutral, PublicKeyToken=b5033a0291fb93d9, processorArchitecture=AMD64">
+      <HintPath>..\packages\Joob.1.0.1\lib\net471\JadeSoftware.Joob.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="JadeSoftware.Joob.Management, Version=20.0.1.0, Culture=neutral, PublicKeyToken=b5033a0291fb93d9, processorArchitecture=AMD64">
+      <HintPath>..\packages\Joob.1.0.1\lib\net471\JadeSoftware.Joob.Management.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Runtime.Serialization" />
@@ -54,22 +69,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="JadeSoftware.Joob">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\2018GeoSpatial\bin\JadeSoftware.Joob.dll</HintPath>
-    </Reference>
-    <Reference Include="JadeSoftware.Joob.Common">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\2018GeoSpatial\bin\JadeSoftware.Joob.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="JadeSoftware.Joob.Management">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\2018GeoSpatial\bin\JadeSoftware.Joob.Management.dll</HintPath>
-    </Reference>
-    <Reference Include="JadeSoftware.Jade.DotNetInterop">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\2018GeoSpatial\bin\JadeSoftware.Jade.DotNetInterop.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="City.cs" />
@@ -91,6 +90,9 @@
     <Compile Include="StateByGeomRTree.cs" />
     <Compile Include="JoobContextExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
