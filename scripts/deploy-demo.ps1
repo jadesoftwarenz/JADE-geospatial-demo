@@ -20,7 +20,7 @@ if ((Test-Path "$jadeDatabaseDirectory\JoobSpatialDemo.dat" -PathType leaf)) {
 }
 
 # Replace the path to the nuget package with the selected jade bin directory.
-(Get-Content -Path ".\NuGet.Config").Replace("c:\jade\bin", $jadeBinDirectory) | Set-Content -Path ".\NuGet.Config"
+(Get-Content -Path ".\..\NuGet.Config").Replace("c:\jade\bin", $jadeBinDirectory) | Set-Content -Path ".\..\NuGet.Config"
 
 Write-Host "Building .NET projects" -ForegroundColor Yellow
 & $PSScriptRoot\build.ps1
