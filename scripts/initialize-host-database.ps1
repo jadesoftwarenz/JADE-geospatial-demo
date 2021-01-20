@@ -11,8 +11,10 @@ $configDirectory = $rootPath + "/config/"
 $binaryRepoDirectory = "$rootPath\binaryRepo"
 $binArchive = "JADE-$jadeVersion-x64-$config-binaries.zip"
 $dbArchive = "JADE-$jadeVersion-$config-db.zip"
+$sysArchive = "JADE-$jadeVersion-x64-$config-sysfiles.zip"
 $localBinArchive = "$binaryRepoDirectory\$binArchive"
 $localDbArchive = "$binaryRepoDirectory\$dbArchive"
+$localSysArchive = "$binaryRepoDirectory\$sysArchive"
 $baseDownloadUrl = "https://secure.jadeworld.com/JADETech/latest/2020"
 
 if (!(Test-Path $binaryRepoDirectory)) {
@@ -63,6 +65,10 @@ if (!(Test-Path $localDbArchive -PathType leaf)) {
       DownloadFile -source "$baseDownloadUrl/$dbArchive" -dest $dbArchive
 }
 
+if (!(Test-Path $localSysArchive -PathType leaf)) {
+      DownloadFile -source "$baseDownloadUrl/$sysArchive" -dest $sysArchive
+}
+
 try {
       if (!(Test-Path $jadeRootDirectory)) {
             New-Item -ItemType Directory -Force -Path $jadeRootDirectory
@@ -91,6 +97,9 @@ try {
       Expand-Archive $localBinArchive -DestinationPath $jadeBinDirectory -Force
       Write-Host "Client binaries installed in directory: $jadeBinDirectory"
       
+      Expand-Archive $localSysArchive -DestinationPath $jadeBinDirectory -Force
+      Write-Host "System binaries installed in directory: $jadeBinDirectory"
+
       # Apply licences
       ApplyLicence -name $regName -key $regKey1 
 

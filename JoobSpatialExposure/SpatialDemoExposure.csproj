@@ -77,8 +77,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="JadeSoftware.Joob-Debug_Unicode_x64">
-      <Version>20.0.1.24</Version>
+    <PackageReference Include="JadeSoftware.Joob-Unicode_x64">
+      <Version>20.0.1.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

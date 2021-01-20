@@ -194,8 +194,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="JadeSoftware.Joob-Debug_Unicode_x64">
-      <Version>20.0.1.24</Version>
+    <PackageReference Include="JadeSoftware.Joob-Unicode_x64">
+      <Version>20.0.1.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
