@@ -19,8 +19,8 @@ if ((Test-Path "$jadeDatabaseDirectory\JoobSpatialDemo.dat" -PathType leaf)) {
     & $PSScriptRoot\loadSchema.ps1
 }
 
-# Copy the nuget package for joob dlls to the place expected by the build.
-Copy-Item $jadeBinDirectory\*.nupkg $PSScriptRoot\..\
+# Replace the path to the nuget package with the selected jade bin directory.
+(Get-Content -Path ".\NuGet.Config").Replace("c:\jade\bin", $jadeBinDirectory) | Set-Content -Path ".\NuGet.Config"
 
 Write-Host "Building .NET projects" -ForegroundColor Yellow
 & $PSScriptRoot\build.ps1
