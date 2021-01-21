@@ -142,7 +142,7 @@
             this.mItemLoadDefaultData.Name = "mItemLoadDefaultData";
             this.mItemLoadDefaultData.Size = new System.Drawing.Size(168, 22);
             this.mItemLoadDefaultData.Text = "&Load Default Data";
-            this.mItemLoadDefaultData.Click += new System.EventHandler(this.mItemLoadDefaultData_Click);
+            this.mItemLoadDefaultData.Click += new System.EventHandler(this.MenuItemLoadDefaultData_Click);
             // 
             // toolStripSeparator1
             // 
@@ -155,7 +155,7 @@
             this.mItemExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.mItemExit.Size = new System.Drawing.Size(168, 22);
             this.mItemExit.Text = "E&xit";
-            this.mItemExit.Click += new System.EventHandler(this.mItemExit_Click);
+            this.mItemExit.Click += new System.EventHandler(this.MenuItemExit_Click);
             // 
             // mItemView
             // 
@@ -172,7 +172,7 @@
             this.mItemToolBar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.mItemToolBar.Size = new System.Drawing.Size(168, 22);
             this.mItemToolBar.Text = "&Tool Bar";
-            this.mItemToolBar.Click += new System.EventHandler(this.mItemToolBar_Click);
+            this.mItemToolBar.Click += new System.EventHandler(this.MenuItemToolBar_Click);
             // 
             // mItemStatusBar
             // 
@@ -180,7 +180,7 @@
             this.mItemStatusBar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
             this.mItemStatusBar.Size = new System.Drawing.Size(168, 22);
             this.mItemStatusBar.Text = "Stat&us Bar";
-            this.mItemStatusBar.Click += new System.EventHandler(this.mItemStatusBar_Click);
+            this.mItemStatusBar.Click += new System.EventHandler(this.MenuItemStatusBar_Click);
             // 
             // splitPanel
             // 
@@ -199,7 +199,7 @@
             // splitPanel.Panel2
             // 
             this.splitPanel.Panel2.Controls.Add(this.pnlMain);
-            this.splitPanel.Size = new System.Drawing.Size(764, 466);
+            this.splitPanel.Size = new System.Drawing.Size(764, 488);
             this.splitPanel.SplitterDistance = 228;
             this.splitPanel.TabIndex = 1;
             this.splitPanel.TabStop = false;
@@ -212,7 +212,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 13);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(228, 453);
+            this.tabControl.Size = new System.Drawing.Size(228, 475);
             this.tabControl.TabIndex = 0;
             // 
             // tabSearch
@@ -221,7 +221,7 @@
             this.tabSearch.Location = new System.Drawing.Point(4, 22);
             this.tabSearch.Name = "tabSearch";
             this.tabSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSearch.Size = new System.Drawing.Size(220, 427);
+            this.tabSearch.Size = new System.Drawing.Size(220, 449);
             this.tabSearch.TabIndex = 1;
             this.tabSearch.Text = "Search";
             this.tabSearch.UseVisualStyleBackColor = true;
@@ -254,7 +254,7 @@
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Padding = new System.Windows.Forms.Padding(1);
-            this.pnlMain.Size = new System.Drawing.Size(532, 466);
+            this.pnlMain.Size = new System.Drawing.Size(532, 488);
             this.pnlMain.TabIndex = 9;
             // 
             // pnlMap
@@ -264,7 +264,7 @@
             this.pnlMap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMap.Location = new System.Drawing.Point(1, 33);
             this.pnlMap.Name = "pnlMap";
-            this.pnlMap.Size = new System.Drawing.Size(530, 432);
+            this.pnlMap.Size = new System.Drawing.Size(530, 454);
             this.pnlMap.TabIndex = 14;
             // 
             // map
@@ -285,10 +285,10 @@
             this.map.ProjectionModeReproject = DotSpatial.Controls.ActionMode.Prompt;
             this.map.RedrawLayersWhileResizing = false;
             this.map.SelectionEnabled = false;
-            this.map.Size = new System.Drawing.Size(528, 430);
+            this.map.Size = new System.Drawing.Size(528, 452);
             this.map.TabIndex = 0;
-            this.map.GeoMouseMove += new System.EventHandler<DotSpatial.Controls.GeoMouseArgs>(this.map_GeoMouseMove);
-            this.map.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.map_KeyPress);
+            this.map.GeoMouseMove += new System.EventHandler<DotSpatial.Controls.GeoMouseArgs>(this.Map_GeoMouseMove);
+            this.map.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Map_KeyPress);
             // 
             // pnlHeader
             // 

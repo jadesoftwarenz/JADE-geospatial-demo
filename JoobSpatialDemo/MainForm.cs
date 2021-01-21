@@ -47,12 +47,12 @@ namespace JoobSpatialDemo
             tabSearch.Controls.Add(_searchCtrl);
         }
 
-        private void mItemExit_Click(object sender, EventArgs e)
+        private void MenuItemExit_Click(object sender, EventArgs e)
         {
             Dispose();
         }
 
-        private void mItemToolBar_Click(object sender, EventArgs e)
+        private void MenuItemToolBar_Click(object sender, EventArgs e)
         {
             mItemToolBar.Checked = !mItemToolBar.Checked;
             toolBar.Visible = mItemToolBar.Checked;
@@ -79,13 +79,13 @@ namespace JoobSpatialDemo
             }
         }
 
-        private void mItemStatusBar_Click(object sender, EventArgs e)
+        private void MenuItemStatusBar_Click(object sender, EventArgs e)
         {
             mItemStatusBar.Checked = !mItemStatusBar.Checked;
             statusBar.Visible = mItemStatusBar.Checked;
         }
 
-        private void mItemLoadDefaultData_Click(object sender, EventArgs e)
+        private void MenuItemLoadDefaultData_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show(this, @"Loading default data may take a long time, do you want to continue?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
@@ -118,7 +118,7 @@ namespace JoobSpatialDemo
             }
         }
 
-        private void map_KeyPress(object sender, KeyPressEventArgs e)
+        private void Map_KeyPress(object sender, KeyPressEventArgs e)
         {
             var key = e.KeyChar;
             switch (key)
@@ -144,7 +144,7 @@ namespace JoobSpatialDemo
             }
         }
 
-        private void map_GeoMouseMove(object sender, GeoMouseArgs e)
+        private void Map_GeoMouseMove(object sender, GeoMouseArgs e)
         {
             lblCoord.Text = String.Format("X: {0}, Y: {1}", e.GeographicLocation.X, e.GeographicLocation.Y);
         }
