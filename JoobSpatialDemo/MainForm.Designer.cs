@@ -42,7 +42,7 @@
             this.mItemToolBar = new System.Windows.Forms.ToolStripMenuItem();
             this.mItemStatusBar = new System.Windows.Forms.ToolStripMenuItem();
             this.splitPanel = new System.Windows.Forms.SplitContainer();
-            this.tabControl = new DotSpatial.Controls.SpatialTabControl();
+            this.tabControl = new System.Windows.Forms.TabControl(); //DotSpatial.Controls.SpatialTabControl();
             this.tabSearch = new System.Windows.Forms.TabPage();
             this.pnlSearch = new System.Windows.Forms.Panel();
             this.tabLegend = new System.Windows.Forms.TabPage();
@@ -367,6 +367,7 @@
         #endregion
 
         private DotSpatial.Controls.SpatialStatusStrip statusBar;
+     //   private System.Windows.Forms.StatusBar statusBar;
         private System.Windows.Forms.MenuStrip mnuMain;
         private System.Windows.Forms.ToolStripMenuItem mItemFile;
         private System.Windows.Forms.ToolStripMenuItem mItemExit;
@@ -374,7 +375,7 @@
         private System.Windows.Forms.ToolStripMenuItem mItemToolBar;
         private System.Windows.Forms.ToolStripMenuItem mItemStatusBar;
         private System.Windows.Forms.SplitContainer splitPanel;
-        private DotSpatial.Controls.SpatialTabControl tabControl;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabLegend;
         private DotSpatial.Controls.Legend legend;
         private System.Windows.Forms.Panel pnlMain;

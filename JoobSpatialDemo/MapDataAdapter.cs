@@ -6,6 +6,7 @@ using DotSpatial.Data;
 using DotSpatial.Projections;
 using DotSpatial.Projections.Transforms;
 using DotSpatial.Topology;
+using DotSpatial.Topology.Utilities;
 using JadeSoftware.Joob;
 using JadeSoftware.Joob.Client;
 using SpatialDemoExposure;
@@ -102,8 +103,7 @@ namespace JoobSpatialDemo
         {
             Debug.Assert(!string.IsNullOrWhiteSpace(abbr));
 
-            State result;
-            if (TheRoot.AllStatesByAbbr.TryGetValue(abbr, out result))
+            if (TheRoot.AllStatesByAbbr.TryGetValue(abbr, out State result))
             {
                 return result.Geom;
             }
@@ -164,12 +164,14 @@ namespace JoobSpatialDemo
         {
             if (rtree.Count > 0)
             {
+                var projection = ProjectionInfo.FromProj4String(SRID_WGS84);
+                projection.Transform = new Transform();
                 var featureSet = new FeatureSet(type)
                 {
                     Name = name,
-                    Projection = new ProjectionInfo(SRID_WGS84) { Transform = new Transform() },
+                    Projection = projection       
                 };
-
+                
                 var watch = new Stopwatch();
                 watch.Start();
 
@@ -254,18 +256,17 @@ namespace JoobSpatialDemo
             var watch = new Stopwatch();
             watch.Start();
 
-            State result;
-            if (TheRoot.AllStatesByAbbr.TryGetValue(region.Abbr, out result))
+            if (TheRoot.AllStatesByAbbr.TryGetValue(region.Abbr, out State result))
             {
                 watch.Stop();
                 searchTime = watch.ElapsedMilliseconds;
-
+                var projection = ProjectionInfo.FromProj4String(SRID_WGS84);
+                projection.Transform = new Transform();
                 var featureSet = new FeatureSet(type)
                 {
                     Name = name,
-                    Projection = new ProjectionInfo(SRID_WGS84) { Transform = new Transform() },
+                    Projection = projection,
                 };
-
                 PopulateFeatureSet(new[] { result.Geom }, featureSet);
                 return featureSet;
             }
@@ -277,15 +278,15 @@ namespace JoobSpatialDemo
 
         private static FeatureSet NameSearchCity(string name, FeatureType type, SearchRegion region, out long searchTime)
         {
-            State state;
-            if (TheRoot.AllStatesByAbbr.TryGetValue(region.Abbr, out state))
+            if (TheRoot.AllStatesByAbbr.TryGetValue(region.Abbr, out State state))
             {
+                var projection = ProjectionInfo.FromProj4String(SRID_WGS84);
+                projection.Transform = new Transform();
                 var featureSet = new FeatureSet(type)
                 {
                     Name = name,
-                    Projection = new ProjectionInfo(SRID_WGS84) { Transform = new Transform() },
+                    Projection = projection,
                 };
-
                 var watch = new Stopwatch();
                 watch.Start();
 
@@ -306,7 +307,7 @@ namespace JoobSpatialDemo
         {
             if (geometries != null && geometries.Count() > 0)
             {
-                var reader = new WKBReader();
+                var reader = new WkbReader();
 
                 var minX = double.PositiveInfinity;
                 var minY= double.PositiveInfinity;
