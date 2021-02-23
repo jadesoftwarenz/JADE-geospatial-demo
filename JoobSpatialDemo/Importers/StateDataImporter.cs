@@ -4,7 +4,7 @@ using SpatialDemoExposure;
 
 namespace JoobSpatialDemo.Importers
 {
-    class StateDataImporter : JoobDataImporter<State>
+    public class StateDataImporter : JoobDataImporter<State>
     {
         public StateDataImporter(string filename)
             : base(filename)

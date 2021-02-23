@@ -9,7 +9,7 @@ using SpatialDemoExposure;
 
 namespace JoobSpatialDemo.Importers
 {
-    class CityDataImporter : JoobDataImporter<City>
+    public class CityDataImporter : JoobDataImporter<City>
     {
         public CityDataImporter(string filename)
             : base(filename)

@@ -2,9 +2,9 @@
 
 namespace JoobSpatialDemo.Importers
 {
-    delegate void ProgressChangedDelegate(object sender, ProgressChangedEventArgs e);
+    public delegate void ProgressChangedDelegate(object sender, ProgressChangedEventArgs e);
 
-    delegate void ImportCompletedDelegate(object sender, ImportCompletedEventArgs e);
+    public delegate void ImportCompletedDelegate(object sender, ImportCompletedEventArgs e);
 
     interface IDataImporter
     {

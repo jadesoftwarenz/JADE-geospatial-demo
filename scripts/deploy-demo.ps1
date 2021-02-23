@@ -28,9 +28,14 @@ if ((Test-Path "$jadeDatabaseDirectory\JoobSpatialDemo.dat" -PathType leaf)) {
 Write-Host "Building .NET projects" -ForegroundColor Yellow
 & $PSScriptRoot\build.ps1
 
-Write-Host "Starting GeoSpatial Application..." -ForegroundColor Yellow
+
+Push-Location $PSScriptRoot\..\JoobSpatialLoader
+Write-Host "Loading GeoSpatial Data..." -ForegroundColor Yellow
+& .\bin\x64\Debug\JoobSpatialLoader.exe
+Pop-Location
 
 Push-Location $PSScriptRoot\..\JoobSpatialDemo
+Write-Host "Starting GeoSpatial Application..." -ForegroundColor Yellow
 & .\bin\x64\Debug\JoobSpatialDemo.exe
 Pop-Location
 

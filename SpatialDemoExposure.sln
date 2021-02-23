@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpatialDemoExposure", "Joob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoobSpatialDemo", "JoobSpatialDemo\JoobSpatialDemo.csproj", "{77B8157D-A996-4E1D-9E76-98B45C6D6BDD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoobSpatialLoader", "JoobSpatialLoader\JoobSpatialLoader.csproj", "{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,14 @@ Global
 		{77B8157D-A996-4E1D-9E76-98B45C6D6BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{77B8157D-A996-4E1D-9E76-98B45C6D6BDD}.Release|x64.ActiveCfg = Release|x64
 		{77B8157D-A996-4E1D-9E76-98B45C6D6BDD}.Release|x64.Build.0 = Release|x64
+		{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}.Debug|x64.ActiveCfg = Debug|x64
+		{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}.Debug|x64.Build.0 = Debug|x64
+		{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}.Release|x64.ActiveCfg = Release|Any CPU
+		{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@ using JadeSoftware.Joob;
 
 namespace JoobSpatialDemo
 {
-    class SearchRegion
+    public class SearchRegion
     {
         public static readonly List<SearchRegion> PredefinedSearchRegions = new List<SearchRegion>();
 

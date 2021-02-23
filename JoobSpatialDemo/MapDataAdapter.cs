@@ -13,7 +13,7 @@ using SpatialDemoExposure;
 
 namespace JoobSpatialDemo
 {
-    class MapDataAdapter
+    public class MapDataAdapter
     {
         public const string SRID_WGS84 = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
         public const string SRID_NAD83_GRS80 = "+proj=aea +lat_1=37 +lat_2=41 +lat_0=0 +lon_0=-79 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs";
@@ -169,9 +169,9 @@ namespace JoobSpatialDemo
                 var featureSet = new FeatureSet(type)
                 {
                     Name = name,
-                    Projection = projection       
+                    Projection = projection
                 };
-                
+
                 var watch = new Stopwatch();
                 watch.Start();
 
@@ -310,7 +310,7 @@ namespace JoobSpatialDemo
                 var reader = new WkbReader();
 
                 var minX = double.PositiveInfinity;
-                var minY= double.PositiveInfinity;
+                var minY = double.PositiveInfinity;
                 var maxX = double.NegativeInfinity;
                 var maxY = double.NegativeInfinity;
 

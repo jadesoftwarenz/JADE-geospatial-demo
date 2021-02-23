@@ -5,7 +5,7 @@ using SpatialDemoExposure;
 
 namespace JoobSpatialDemo.Importers
 {
-    abstract class JoobDataImporter<T> : DataImporter<T>
+    public abstract class JoobDataImporter<T> : DataImporter<T>
     {
         protected JoobDataImporter(string filename)
             : base(filename)

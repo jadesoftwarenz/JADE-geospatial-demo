@@ -5,7 +5,7 @@ using System.IO;
 
 namespace JoobSpatialDemo.Importers
 {
-    abstract class DataImporter<T> : IDataImporter
+   public abstract class DataImporter<T> : IDataImporter
     {
         private readonly string _filename;
         private BackgroundWorker _worker;

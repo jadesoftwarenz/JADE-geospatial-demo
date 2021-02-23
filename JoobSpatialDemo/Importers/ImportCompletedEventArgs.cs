@@ -2,7 +2,7 @@
 
 namespace JoobSpatialDemo.Importers
 {
-    class ImportCompletedEventArgs
+    public class ImportCompletedEventArgs
     {
         public ImportCompletedEventArgs(IEnumerable importedObjects) : this(importedObjects, 0) { }
 
