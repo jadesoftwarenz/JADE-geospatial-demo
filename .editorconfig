@@ -1,0 +1,8 @@
+#Indicate this is the config of the root
+root = true
+
+# Apply the following rules to these file types
+[{*.{cpp,c,h,hpp,txt,sh,py}}]
+indent_style = tab
+indent_size = 4
+trim_trailing_whitespace = true
