@@ -74,3 +74,7 @@ Now that the application is running, you will first want to import some example 
 The application will automatically load geospatial data for the States, Counties and Cities of the United States of America.
 
 To see a map of this data, select the layers that you want (for example, States and Counties) then click the __Search__ button. A zoomable map will be generated in the right-hand pane.
+
+## License
+
+MIT - for more details see, the [LICENSE](./LICENSE) file.
