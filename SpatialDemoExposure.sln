@@ -9,6 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoobSpatialDemo", "JoobSpat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoobSpatialLoader", "JoobSpatialLoader\JoobSpatialLoader.csproj", "{D67094D3-8E3C-4B71-9B00-B8B3098CF78C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE9A8D03-23EE-49CB-A7CA-2FBECDDEA075}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\build.ps1 = scripts\build.ps1
+		scripts\deploy-demo.ps1 = scripts\deploy-demo.ps1
+		scripts\find-msbuild.ps1 = scripts\find-msbuild.ps1
+		scripts\initialize-host-database.ps1 = scripts\initialize-host-database.ps1
+		scripts\loadSchema.ps1 = scripts\loadSchema.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
