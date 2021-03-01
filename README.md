@@ -1,19 +1,28 @@
 # JADE GeoSpatial Demo
 
-These instructions will get the JADE GeoSpatial demonstration application running. The JADE GeoSpatial demo is a .NET application written in C# which uses JADE's .NET exposure functionality to expose GeoSpatial functionality.
+## Overview
+
+The JADE GeoSpatial demo is a .NET application written in C# that uses JADE's .NET API to makes use of JADE's GeoSpatial functionality.
+
+These instructions will get the JADE GeoSpatial demonstration application running.
+
+## Prerequisites
 
 As this demo uses .NET, you will need Visual Studio 2017 and .NET Framework 4.7.1 installed on your machine.
 
-If you want to skip these instructions, you can run a script which will perform the steps automatically.
+## Quick Start
+
+If you want to skip the step by step instructions, you can run a script which will perform the steps automatically.
 This script will create a dedicated JADE database for use with the demo, so you need to specify where to put that database to avoid it interfering with any existing JADE database on your computer:
 
 - Modify the __run-config.ps1__ script in the __/scripts/config/__ folder:
   - Set the __$jadeRootDirectory__ variable to the path where you want the database generated.
+
 - You can now run the __deploy-demo.ps1__ script from the __/scripts/__ folder.
 
-## Set up a JADE Database
+## Database Setup
 
-The .NET GeoSpatial demo will connect to a JADE database, which will be responsible for maintaining the geospatial data. As such, you will need a JADE Database. You can either use an existing JADE database, or you can have one generated for you.
+The .NET GeoSpatial demo will connect to a JADE database, which is responsible for maintaining persistent geo-spatial data. You can either use an existing JADE database, or you can have one generated for you.
 
 ### If you want to use your existing database
 
