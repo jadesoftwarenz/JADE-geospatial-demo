@@ -324,6 +324,7 @@ namespace JoobSpatialDemo
                     }
                 }
             }
+            _map.ZoomToMaxExtent();
 
             _timer.Stop();
             _mainForm.UpdatePerformanceCounter(searchTime, _timer.ElapsedMilliseconds);
