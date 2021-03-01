@@ -195,10 +195,12 @@ namespace JoobSpatialDemo
             var layer = TheRoot.OtherSpatialLayers[layerName];
             if (layer != null)
             {
+                var projection = ProjectionInfo.FromProj4String(SRID_None);
+                projection.Transform = new Transform();
                 var featureSet = new FeatureSet(FeatureType.Unspecified)
                 {
                     Name = layerName,
-                    //Projection = new ProjectionInfo(SRID_None) { Transform = new Transform() }
+                    Projection = projection
                 };
 
                 var watch = new Stopwatch();
