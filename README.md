@@ -4,6 +4,8 @@
 
 The JADE GeoSpatial demo is a .NET application written in C# that uses JADE's .NET API to makes use of JADE's GeoSpatial functionality.
 
+A detailed presentation of the demo can be found at: https://youtu.be/vkDBpvHVazU?t=3329
+
 These instructions will get the JADE GeoSpatial demonstration application running.
 
 ## Prerequisites
